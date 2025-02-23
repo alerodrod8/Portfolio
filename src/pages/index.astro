@@ -1,0 +1,34 @@
+---
+import Header from "../layouts/header.astro";
+import Social from "../components/social.astro";
+import Upcoming from "../components/upcoming.astro";
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <link id="title-favicon" rel="icon" href="/faviconb.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div class="main-layout">
+      <!-- Contenedor superior -->
+      <div class="top-container">
+        <Header />
+      </div>
+
+      <!-- Contenedor inferior -->
+      <div class="bottom-container">
+        <!-- Contenedor inferior izquierdo -->
+        <div class="left-container">
+          <Social />
+        </div>
+
+        <!-- Contenedor inferior derecho -->
+        <Upcoming />
+      </div>
+    </div>
+  </body>
+</html>

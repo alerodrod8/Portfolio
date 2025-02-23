@@ -1,0 +1,59 @@
+:root {
+    --color-p1b: #1a1814;
+    --color-p1w: #d8d4d7;
+    --color-p1y: #e0b552;
+    --color-p1m: #a78537;
+    --color-p1g: #e38f90;
+    --color-p1d: #cf7c7d;
+  }
+  
+  .follow-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: -40px;
+    left: 20px;
+    gap: 20px;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    right: auto;
+  }
+  
+  .socials-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .socials-text {
+    font-size: 30px;
+    font-family: 'mt', 'sans-serif';
+    color: var(--color-p1bl);
+    white-space: nowrap;
+  }
+  
+  .social-icon {
+    height: 45px;
+    width: 45px;
+  }
+  
+  #copy {
+    font-size: 15px;
+    font-family: 'mm', sans-serif;
+    color: var(--color-p1bl);
+    white-space: nowrap;
+    margin-top: 10px;
+  }
+  
+  #copy::before {
+    content: "©";
+    color: var(--color-p1y);
+    margin-right: 5px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  body:not(.dark) #copy::before {
+    color: var(--color-p1d);
+  }

@@ -1,0 +1,46 @@
+:root {
+    --color-p1b: #1a1814;
+    --color-p1w: #d8d4d7;
+    --color-p1y: #e0b552;
+    --color-p1m: #a78537;
+    --color-p1g: #e38f90;
+    --color-p1d: #cf7c7d;
+  }
+  
+  @font-face {
+    font-family: 'mm';
+    src: url('./fonts/mm.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'mt';
+    src: url('./fonts/mt.otf') format('opentype');
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'mm', sans-serif;
+    background-color: var(--color-p1w);
+    color: var(--color-p1b);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .top-container {
+    flex: 0 0 auto;
+  }
+  
+  .bottom-container {
+    display: flex;
+    flex: 1;
+  }
+  
+  .left-container {
+    flex: 0 0 auto;
+    width: 150px;
+  }

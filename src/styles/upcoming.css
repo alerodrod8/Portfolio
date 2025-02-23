@@ -1,0 +1,187 @@
+:root {
+  --color-p1b: #1a1814;
+  --color-p1w: #d8d4d7;
+  --color-p1y: #e0b552;
+  --color-p1m: #a78537;
+  --color-p1g: #e38f90;
+  --color-p1d: #cf7c7d;
+}
+
+.right-container {
+  flex: 1;
+  margin: 20px 40px 20px 20px;
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.rl-container {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 0px 0px;
+  padding: 10px;
+}
+
+.coming-soon-container {
+  font-family: 'mm', sans-serif;
+  font-size: 80px;
+  margin-top: 10px;
+}
+
+.tech-details-container {
+  font-family: 'mt', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+body.dark .coming-soon-container,
+body.dark .tech-details-container {
+  color: var(--color-p1b); /* Texto blanco en tema oscuro */
+}
+
+.rr-container {
+  flex: 1; /* Ocupa el resto del espacio disponible */
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.arrow-icon {
+  width: 60px;
+  height: 60px;
+  transition: filter 0.3s ease;
+}
+
+.left-arrow {
+  transform-origin: center;
+  transform: rotate(180deg);
+  margin-right: 20px;
+}
+
+.right-arrow {
+  margin-left: 20px;
+}
+
+.image-content {
+  width: 700px; /* Ancho fijo */
+  height: 600px; /* Alto fijo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Evita que la imagen se desborde del contenedor */
+}
+
+.image-content img {
+  width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
+  object-fit: cover; /* Ajusta la imagen manteniendo su relación de aspecto y cubriendo el contenedor */
+}
+
+.content-container {
+  height: 15%;
+}
+
+.right-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 5px;
+}
+
+.right-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 5px;
+}
+
+body.dark .right-container::before,
+body.dark .right-container::after {
+  background-color: var(--color-p1y);
+}
+
+body:not(.dark) .right-container::before,
+body:not(.dark) .right-container::after {
+  background-color: var(--color-p1g);
+}
+
+.content-container {
+  height: 25%;
+  display: flex;
+  align-items: center; /* Centra verticalmente los botones */
+  justify-content: center; /* Centra horizontalmente los botones */
+  gap: 20px; /* Espacio entre los botones */
+}
+
+.circle-button {
+  width: 32px; /* Ancho del botón */
+  height: 32px; /* Alto del botón */
+  border-radius: 50%; /* Hace que el botón sea circular */
+  border: none; /* Elimina el borde predeterminado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  background-color: var(--color-p1b); /* Color inicial (negro) */
+  transition: all 0.3s ease; /* Transición suave para el cambio de color y tamaño */
+}
+
+/* Cambiar el color de los botones en modo oscuro */
+body.dark .circle-button {
+  background-color: var(--color-p1b); /* Color negro en modo oscuro */
+}
+
+/* Cambiar el color de los botones en modo claro */
+body:not(.dark) .circle-button {
+  background-color: var(--color-p1b); /* Color negro en modo claro */
+}
+
+/* Efecto hover para el tema claro */
+body:not(.dark) .circle-button:hover {
+  background-color: var(--color-p1g); /* Color rosado en hover (tema claro) */
+  width: 50px; /* Ancho aumentado en hover */
+  height: 50px; /* Alto aumentado en hover */
+}
+
+/* Efecto hover para el tema oscuro */
+body.dark .circle-button:hover {
+  background-color: var(--color-p1y); /* Color amarillo en hover (tema oscuro) */
+  width: 50px; /* Ancho aumentado en hover */
+  height: 50px; /* Alto aumentado en hover */
+}
+
+/* Estilos para el botón activo en tema claro */
+body:not(.dark) .circle-button.active {
+  background-color: var(--color-p1g); /* Color rosado en tema claro */
+  width: 50px; /* Ancho aumentado */
+  height: 50px; /* Alto aumentado */
+}
+
+/* Estilos para el botón activo en tema oscuro */
+body.dark .circle-button.active {
+  background-color: var(--color-p1y); /* Color amarillo en tema oscuro */
+  width: 50px; /* Ancho aumentado */
+  height: 50px; /* Alto aumentado */
+}
