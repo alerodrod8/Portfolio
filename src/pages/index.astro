@@ -1,15 +1,16 @@
 ---
 import Header from "../layouts/header.astro";
-import Social from "../components/social.astro";
-import Upcoming from "../components/upcoming.astro";
+import Social from "../layouts/social.astro";
+import Navigation from "../components/navigation.jsx";
 ---
 
 <!DOCTYPE html>
 <html>
   <head>
     <title>Portfolio</title>
-    <link id="title-favicon" rel="icon" href="/faviconb.svg" type="image/svg+xml">
+    <link id="title-favicon" rel="icon" href="/img/faviconb.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/upcoming.css">
     <meta charset="UTF-8">
   </head>
   <body>
@@ -27,7 +28,9 @@ import Upcoming from "../components/upcoming.astro";
         </div>
 
         <!-- Contenedor inferior derecho -->
-        <Upcoming />
+        <div class="right-container">
+          <Navigation />
+        </div>
       </div>
     </div>
   </body>

@@ -4,15 +4,24 @@ This portfolio contains the electronics projects I will develop over time. When 
 
 # CHANGELOG
 
+>### v0.7.4 - 25/02/2025
+
+  - 📝 Added language switch button.
+  - 📝 Added language translation functionality.
+  - 📝 Added noticeboard buttons and arrows functionality.
+  - 🔄 Updated project's files hierarchy.
+  - 🔄 Updated contact info.
+  - 🔧 Fixed the dark theme to light theme transition button animation.
+
 >### v0.5 - 23/02/2025
-  - 📝 Added basic structure of the portfolio
-  - 🔧 Updated generic README.md file info
-  - ⚙️ Repository description changed
+  - 📝 Added basic structure of the portfolio.
+  - 🔄 Updated generic README.md file info.
+  - ⚙️ Repository description changed.
 
 
 ## Contact info
 [<img src="./src/assets/linkedin.svg" alt="LinkedIn" width="32" height="32" style="margin-right: 10px">](https://www.linkedin.com/in/alejandro-rodriguez-b49932343/)
-[<img src="./src/assets/instagram.svg" alt="Instagram" width="32" height="32" style="margin-right: 10px">](https://www.instagram.com/alerodri_7)
-[<img src="./src/assets/gmail.svg" alt="Gmail" width="32" height="32">](mailto:rodriguezrodriguezalejandro20@gmail.com)
+[<img src="./src/assets/instagram.svg" alt="Instagram" width="32" height="32" style="margin-right: 10px">](https://www.instagram.com/Arodriguez.rr)
+[<img src="./src/assets/gmail.svg" alt="Gmail" width="32" height="32">](mailto:rr.alejandrorodriguez@gmail.com)
 
 ### ©2025 Alejandro Rodríguez Rodríguez

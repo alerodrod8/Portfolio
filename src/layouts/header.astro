@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
     <link rel="stylesheet" href="./src/styles/header.css"/>
-    <script src="./src/js/themeToggle.js" defer></script>
-
+    <script src="./src/pages/api/themeToggle.js" defer></script>
+    <script type="module" src="./src/pages/api/languageToggle.js" defer></script>
+</head>
+<body>
     <div class="topnav">
-        <img id="favicon" src="/faviconb.svg" alt="Logo" class="logo" />
-        <button id="change-palette" class="button">CHANGE PALETTE</button>
+        <img id="favicon" src="/img/faviconb.svg" alt="Logo" class="logo" />
+        <button id="change-language" class="button language-button">
+            <img src="src/assets/img/en.svg" alt="Idioma" id="language-icon" />
+        </button>
+        <button id="change-palette" class="button" data-translate="palette">N/A</button>
         <div class="nav-links">
-            <a href="/src/pages/index.astro" class="nav-link">HOME</a>
-            <a href="/src/pages/works.astro" class="nav-link">WORKS</a>
-            <a href="/src/pages/about.astro" class="nav-link">ABOUT ME</a>
+            <a href="#" class="nav-link" data-component="upcoming" data-key="home" data-translate="home">N/A</a>
+            <a href="#" class="nav-link" data-component="prjcts" data-key="prjcts" data-translate="prj">N/A</a>
+            <a href="#" class="nav-link" data-component="about" data-key="about" data-translate="about">N/A</a>
         </div>
     </div>
+</body>
 </html>

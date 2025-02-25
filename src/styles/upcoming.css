@@ -55,22 +55,49 @@ body.dark .tech-details-container {
   padding-top: 10px;
 }
 
+.image-scroll-container {
+  width: 700px; /* Ancho fijo del contenedor de imágenes */
+  height: 600px; /* Alto fijo */
+  position: relative; /* Necesario para superponer las imágenes */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.image-content {
+  position: absolute; /* Superpone las imágenes */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Oculta todas las imágenes por defecto */
+  transition: opacity 0.5s ease; /* Transición suave para el efecto de desvanecimiento */
+}
+
+.image-content.active {
+  opacity: 1; /* Muestra solo la imagen activa */
+}
+
+/* Efecto hover para las flechas */
+.arrow-container:hover .arrow-icon {
+  transform: scale(1.2); /* Aumenta el tamaño de la flecha */
+}
+
 .arrow-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 100%;
+  width: 60px;
+  height: 60px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
+  margin: 0 20px;
 }
 
 .arrow-icon {
   width: 60px;
   height: 60px;
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease; /* Transición suave para el cambio de tamaño */
 }
 
 .left-arrow {

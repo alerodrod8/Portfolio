@@ -27,6 +27,7 @@
   }
   
   .socials-text {
+    min-width: 450px;
     font-size: 30px;
     font-family: 'mt', 'sans-serif';
     color: var(--color-p1bl);

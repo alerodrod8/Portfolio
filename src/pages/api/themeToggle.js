@@ -1,4 +1,3 @@
-// theme-toggle.js
 const toggleButton = document.getElementById('change-palette');
 const root = document.documentElement;
 const favicon = document.getElementById('favicon');
@@ -12,38 +11,29 @@ function updateTheme(isDark) {
     if (isDark) {
         root.style.setProperty('--color-p1w', '#1a1814'); // Fondo oscuro
         root.style.setProperty('--color-p1b', '#d8d4d7'); // Texto claro
-        if (favicon) favicon.src = "/faviconw.svg"; // Logo blanco para tema oscuro
+        if (favicon) favicon.src = "/img/faviconw.svg"; // Logo blanco para tema oscuro
         body.classList.add('dark'); // Añadir clase para tema oscuro
 
         // Cambiar las flechas a arrowy.svg (amarillo) en modo oscuro
         arrowIcons.forEach(arrow => {
-            arrow.src = "./src/assets/arrowy.svg";
+            arrow.src = "./src/assets/img/arrowy.svg";
         });
 
         // Cambiar la imagen a thumbW.svg para el tema oscuro
-        updateImageForTheme('dark');
+        if (themeImage) themeImage.src = './src/assets/img/thumbW.svg';
     } else {
         root.style.setProperty('--color-p1w', '#d8d4d7'); // Fondo claro
         root.style.setProperty('--color-p1b', '#1a1814'); // Texto oscuro
-        if (favicon) favicon.src = "/faviconb.svg"; // Logo negro para tema claro
+        if (favicon) favicon.src = "/img/faviconb.svg"; // Logo negro para tema claro
         body.classList.remove('dark'); // Quitar clase para tema oscuro
 
         // Cambiar las flechas a arrowp.svg (rosa) en modo claro
         arrowIcons.forEach(arrow => {
-            arrow.src = "./src/assets/arrowp.svg";
+            arrow.src = "./src/assets/img/arrowp.svg";
         });
 
         // Cambiar la imagen a thumbB.svg para el tema claro
-        updateImageForTheme('light');
-    }
-}
-
-// Función para actualizar la imagen según el tema
-function updateImageForTheme(theme) {
-    if (theme === 'dark') {
-        themeImage.src = './src/assets/img/thumbW.svg'; // Imagen para tema oscuro
-    } else {
-        themeImage.src = './src/assets/img/thumbB.svg'; // Imagen para tema claro
+        if (themeImage) themeImage.src = './src/assets/img/thumbB.svg';
     }
 }
 
@@ -53,7 +43,7 @@ updateTheme(false);
 // Cambiar el tema al interactuar con el botón
 if (toggleButton) {
     toggleButton.addEventListener('click', () => {
-        const isDark = root.style.getPropertyValue('--color-p1w') === '#1a1814';
+        const isDark = body.classList.contains('dark');
         updateTheme(!isDark);
     });
 }
@@ -61,7 +51,7 @@ if (toggleButton) {
 // Cambiar el favicon del <title> según la configuración del navegador
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 if (prefersDarkScheme.matches) {
-    if (titleFavicon) titleFavicon.href = "/faviconw.svg"; // Favicon blanco para tema oscuro
+    if (titleFavicon) titleFavicon.href = "/img/faviconw.svg"; // Favicon blanco para tema oscuro
 } else {
-    if (titleFavicon) titleFavicon.href = "/faviconb.svg"; // Favicon negro para tema claro
+    if (titleFavicon) titleFavicon.href = "/img/faviconb.svg"; // Favicon negro para tema claro
 }

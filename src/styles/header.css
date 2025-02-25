@@ -22,7 +22,7 @@
   
   .nav-links {
     display: flex;
-    gap: 40px;
+    gap: 100px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -69,7 +69,57 @@
     box-shadow: 0 6px var(--color-p1m);
     color: var(--color-p1w);
   }
+
+  body.dark .button:active {
+    box-shadow: 0 2px var(--color-p1m); /* Sombra reducida */
+}
   
   body:not(.dark) .button:active {
     box-shadow: 0 2px var(--color-p1d);
   }
+
+  #change-palette {
+    min-width: 225px;
+  }
+
+  .language-button {
+    width: 50px; /* Tamaño del botón */
+    height: 50px; /* Tamaño del botón */
+    border-radius: 50%; /* Hace el botón circular */
+    margin-right: -40px; /* Espacio a la derecha del botón */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    overflow: hidden; /* Asegura que la imagen no se salga del botón */
+}
+
+.language-button img {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px; /* Tamaño de la imagen */
+    transition: transform 0.3s ease; /* Animación al hacer clic */
+}
+
+/* Estilos para el tema claro */
+body:not(.dark) .language-button {
+    background-color: var(--color-p1g);
+    box-shadow: 0 6px var(--color-p1d);
+}
+
+/* Estilos para el tema oscuro */
+body.dark .language-button {
+    background-color: var(--color-p1y);
+    box-shadow: 0 6px var(--color-p1m);
+}
+
+/* Efecto de "hundimiento" en el tema claro */
+body:not(.dark) .language-button:active {
+    box-shadow: 0 2px var(--color-p1d);
+}
+
+/* Efecto de "hundimiento" en el tema oscuro */
+body.dark .language-button:active {
+    box-shadow: 0 2px var(--color-p1m);
+}
