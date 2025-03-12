@@ -1,0 +1,43 @@
+---
+// prjcts.astro
+import Card from './src/pages/gallery/card.astro';
+// Importa otras tarjetas según sea necesario (1.astro, 2.astro, etc.)
+---
+<link rel="stylesheet" href="/src/styles/prjcts.css"/>
+<link rel="stylesheet" href="/src/styles/cards.css"/>
+<div class="prjcts">
+<div class="top-wrapper">
+  <div class="cards-container">
+    <Card
+        imageSrc="./src/assets/img/thumb.svg"
+        title="Título"
+        description="Descripción de la tarjeta."
+        buttonText="Ver más"
+      />
+  </div>
+  <div class="cards-container">
+      <Card
+        imageSrc="./src/assets/img/thumb.svg"
+        title="Título"
+        description="Descripción de la tarjeta."
+        buttonText="Ver más"
+      />
+  </div>
+  <div class="cards-container">
+    <Card
+      imageSrc="./src/assets/img/thumb.svg"
+      title="Título"
+      description="Descripción de la tarjeta."
+      buttonText="Ver más"
+    />
+  </div>
+<!-- Añade más tarjetas aquí -->
+</div>
+<div class="bottom-wrapper">
+  <div class="buttons-container">
+    <button class="round-button">1</button>
+    <button class="round-button">2</button>
+    <!-- Añade más botones según sea necesario -->
+  </div>
+</div>
+</div>

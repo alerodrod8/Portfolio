@@ -9,8 +9,8 @@ const themeImage = document.getElementById('theme-image');
 // Función para actualizar el tema
 function updateTheme(isDark) {
     if (isDark) {
-        root.style.setProperty('--color-p1w', '#1a1814'); // Fondo oscuro
-        root.style.setProperty('--color-p1b', '#d8d4d7'); // Texto claro
+        root.style.setProperty('--color-gpwl', '#1a1814'); // Fondo oscuro
+        root.style.setProperty('--color-gpbl', '#d8d4d7'); // Texto claro
         if (favicon) favicon.src = "/img/faviconw.svg"; // Logo blanco para tema oscuro
         body.classList.add('dark'); // Añadir clase para tema oscuro
 
@@ -22,8 +22,8 @@ function updateTheme(isDark) {
         // Cambiar la imagen a thumbW.svg para el tema oscuro
         if (themeImage) themeImage.src = './src/assets/img/thumbW.svg';
     } else {
-        root.style.setProperty('--color-p1w', '#d8d4d7'); // Fondo claro
-        root.style.setProperty('--color-p1b', '#1a1814'); // Texto oscuro
+        root.style.setProperty('--color-gpwl', '#d8d4d7'); // Fondo claro
+        root.style.setProperty('--color-gpbl', '#1a1814'); // Texto oscuro
         if (favicon) favicon.src = "/img/faviconb.svg"; // Logo negro para tema claro
         body.classList.remove('dark'); // Quitar clase para tema oscuro
 

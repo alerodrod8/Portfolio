@@ -1,12 +1,3 @@
-:root {
-    --color-p1b: #1a1814;
-    --color-p1w: #d8d4d7;
-    --color-p1y: #e0b552;
-    --color-p1m: #a78537;
-    --color-p1g: #e38f90;
-    --color-p1d: #cf7c7d;
-  }
-  
   .topnav {
     display: flex;
     align-items: center;
@@ -16,10 +7,12 @@
   }
   
   .logo {
+    position: relative;
+    width: 80px;
     height: 80px;
     margin-right: auto;
   }
-  
+
   .nav-links {
     display: flex;
     gap: 100px;
@@ -29,10 +22,11 @@
   }
   
   .nav-link {
-    color: var(--color-p1bl);
+    color: var(--color-gpbl);
     text-decoration: none;
     font-size: 36px;
     font-family: 'mt', sans-serif;
+    transition: color 0.3s ease;
   }
   
   .button {
@@ -44,40 +38,35 @@
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: var(--color-p1b);
-    background-color: var(--color-p1y);
     border: none;
     border-radius: 5px;
-    box-shadow: 0 6px var(--color-p1m);
     margin-left: 80px;
     transition: all 0.1s ease;
   }
   
   .button:active {
-    box-shadow: 0 2px var(--color-p1m);
+    box-shadow: 0 2px var(--color-cps);
     transform: translateY(4px);
   }
   
   body:not(.dark) .button {
-    background-color: var(--color-p1g);
-    box-shadow: 0 6px var(--color-p1d);
-    color: var(--color-p1b);
+    background-color: var(--color-cpa);
+    box-shadow: 0 6px var(--color-cps);
   }
 
   body.dark .button {
-    background-color: var(--color-p1y);
-    box-shadow: 0 6px var(--color-p1m);
-    color: var(--color-p1w);
+    background-color: var(--color-dpa);
+    box-shadow: 0 6px var(--color-dps);
   }
-
+  
   body.dark .button:active {
-    box-shadow: 0 2px var(--color-p1m); /* Sombra reducida */
-}
+    box-shadow: 0 2px var(--color-dps); /* Sombra reducida */
+  }
   
   body:not(.dark) .button:active {
-    box-shadow: 0 2px var(--color-p1d);
+    box-shadow: 0 2px var(--color-cps);
   }
-
+  
   #change-palette {
     min-width: 225px;
   }
@@ -104,22 +93,22 @@
 
 /* Estilos para el tema claro */
 body:not(.dark) .language-button {
-    background-color: var(--color-p1g);
-    box-shadow: 0 6px var(--color-p1d);
+    background-color: var(--color-cpa);
+    box-shadow: 0 6px var(--color-cps);
 }
 
 /* Estilos para el tema oscuro */
 body.dark .language-button {
-    background-color: var(--color-p1y);
-    box-shadow: 0 6px var(--color-p1m);
+    background-color: var(--color-dpa);
+    box-shadow: 0 6px var(--color-dps);
 }
 
 /* Efecto de "hundimiento" en el tema claro */
 body:not(.dark) .language-button:active {
-    box-shadow: 0 2px var(--color-p1d);
+    box-shadow: 0 2px var(--color-cps);
 }
 
 /* Efecto de "hundimiento" en el tema oscuro */
 body.dark .language-button:active {
-    box-shadow: 0 2px var(--color-p1m);
+    box-shadow: 0 2px var(--color-dps);
 }
