@@ -7,7 +7,7 @@ const arrowIcons = document.querySelectorAll('.arrow-icon'); // Selecciona todas
 const themeImage = document.getElementById('theme-image');
 
 // Función para actualizar el tema
-function updateTheme(isDark) {
+function updateTheme(isDark = false) {
     if (isDark) {
         root.style.setProperty('--color-gpwl', '#1a1814'); // Fondo oscuro
         root.style.setProperty('--color-gpbl', '#d8d4d7'); // Texto claro
@@ -35,10 +35,14 @@ function updateTheme(isDark) {
         // Cambiar la imagen a thumbB.svg para el tema claro
         if (themeImage) themeImage.src = './src/assets/img/thumbB.svg';
     }
+
+    localStorage.setItem('isDark', isDark);
 }
 
+const svd_isDark = localStorage.getItem('isDark') === 'true';
+
 // Iniciar con el tema claro
-updateTheme(false);
+updateTheme(svd_isDark);
 
 // Cambiar el tema al interactuar con el botón
 if (toggleButton) {

@@ -1,56 +1,109 @@
-/* styles/card.css */
 .card {
-    width: 514px; /* Ancho reducido */
-    height: 600px; /* Alto reducido */
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: violet;
-    flex-shrink: 0; /* Evita que las tarjetas se reduzcan */
-  }
+  width: 100%; /* Ahora ocupa el 100% del contenedor */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2.5px solid var(--color-cpa);
+}
 
-  body.dark .cards {
-    border-top: 5px var(--color-dpa); 
-  }
-  
-  .card-top {
-    height: 80%; /* 70% de 350px = 245px */
-    width: 100%;
-  }
-  
-  .card-top img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen al contenedor */
-  }
-  
-  .card-bottom {
-    height: 20%; /* 30% de 350px = 105px */
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .card-bottom h3 {
-    margin: 0;
-    font-size: 1.2em; /* Tamaño de fuente reducido */
-  }
-  
-  .card-bottom p {
-    margin: 0;
-    font-size: 0.9em; /* Tamaño de fuente reducido */
-    color: #666;
-  }
-  
-  .card-bottom button {
-    align-self: flex-end;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em; /* Tamaño de fuente reducido */
-  }
+body.dark .card {
+  border-color: var(--color-dpa);
+}
+
+.card-top {
+  height: 80%;
+  width: 100%;
+}
+
+.card-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-bottom {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+body.dark .title {
+  color: var(--color-gpbl);
+}
+
+.title {
+  height: 100%;
+  width: 80%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  font-size: 1.3em;
+  font-family: 'mt', sans-serif;
+  line-height: 10px;
+}
+
+.title h3 {
+  font-size: 1.4em;
+  font-family: 'mm', sans-serif;
+}
+
+.title p {
+  margin-top: 0px;
+}
+
+.line {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line button {
+  display: inline-block;
+  height: 60%;
+  width: 70%;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: none;
+  background: none;
+  outline: none;
+  margin-bottom: 10px;
+  transition: all 0.1s ease;
+}
+
+.line button img {
+  width: 45px;
+  height: 45px;
+  align-items: center;
+}
+
+.line button:active {
+  box-shadow: 0 2px var(--color-cps);
+  transform: translateY(4px);
+}
+
+body:not(.dark) .line button {
+  background-color: var(--color-cpa);
+  box-shadow: 0 6px var(--color-cps);
+}
+
+body.dark .line button {
+  background-color: var(--color-dpa);
+  box-shadow: 0 6px var(--color-dps);
+}
+
+body.dark .line button:active {
+  box-shadow: 0 2px var(--color-dps); /* Sombra reducida */
+}
+
+body:not(.dark) .line button:active {
+  box-shadow: 0 2px var(--color-cps);
+}

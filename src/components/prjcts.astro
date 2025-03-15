@@ -1,43 +1,104 @@
 ---
 // prjcts.astro
-import Card from './src/pages/gallery/card.astro';
-// Importa otras tarjetas según sea necesario (1.astro, 2.astro, etc.)
+import Card from '../components/card.astro';
 ---
+<head>
 <link rel="stylesheet" href="/src/styles/prjcts.css"/>
 <link rel="stylesheet" href="/src/styles/cards.css"/>
+<script type="module" src="/src/pages/api/scroll.js"></script>
+</head>
 <div class="prjcts">
-<div class="top-wrapper">
-  <div class="cards-container">
-    <Card
-        imageSrc="./src/assets/img/thumb.svg"
-        title="Título"
-        description="Descripción de la tarjeta."
-        buttonText="Ver más"
-      />
+  <div class="top-gradient"></div>
+  <div class="scroll-top-container">
+    <button class="scroll-top-button">
+      <img src="/src/assets/img/arrowp.svg" alt="Scroll up" class="rotate-180"/>
+    </button>
   </div>
-  <div class="cards-container">
-      <Card
-        imageSrc="./src/assets/img/thumb.svg"
-        title="Título"
-        description="Descripción de la tarjeta."
-        buttonText="Ver más"
-      />
+  <div class="top-wrapper">
+    <div class="gallery">
+      <div class="cards-grid">
+        <div class="cards-container">
+          <Card
+            title='N/A'
+            description='N/A'
+            imageSrc = '/src/assets/img/placeholder.svg'
+            titleKey='t1'
+            descriptionKey='d1'
+          />
+        </div>
+        <div class="cards-container">
+          <Card
+          title='N/A'
+          description='N/A'
+          imageSrc='/src/assets/img/placeholder.svg'
+          titleKey='t2'
+          descriptionKey='d2'
+          />
+        </div>
+        <div class="cards-container">
+          <Card
+          title='N/A'
+          description='N/A'
+          imageSrc='/src/assets/img/placeholder.svg'
+          titleKey='t3'
+          descriptionKey='d3'
+          />
+        </div>
+        <div class="cards-container">
+          <Card
+          title='N/A'
+          description='N/A'
+          imageSrc='/src/assets/img/placeholder.svg'
+          titleKey='t4'
+          descriptionKey='d4'
+          />
+        </div>
+        <div class="cards-container">
+          <Card
+          title='N/A'
+          description='N/A'
+          imageSrc='/src/assets/img/placeholder.svg'
+          titleKey='t4'
+          descriptionKey='d4'
+          />
+        </div>
+        <div class="cards-container">
+          <Card
+          title='N/A'
+          description='N/A'
+          imageSrc='/src/assets/img/placeholder.svg'
+          titleKey='t4'
+          descriptionKey='d4'
+          />
+        </div>
+        <!-- Add more cards here -->
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="cards-container">
-    <Card
-      imageSrc="./src/assets/img/thumb.svg"
-      title="Título"
-      description="Descripción de la tarjeta."
-      buttonText="Ver más"
-    />
-  </div>
-<!-- Añade más tarjetas aquí -->
+  <div class="bottom-gradient" style="opacity: 0;"></div>
 </div>
-<div class="bottom-wrapper">
-  <div class="buttons-container">
-    <button class="round-button">1</button>
-    <button class="round-button">2</button>
-    <!-- Añade más botones según sea necesario -->
-  </div>
-</div>
-</div>
+
+<script>
+  import '../pages/api/languageToggle.js';
+
+document.addEventListener('DOMContentLoaded', applyTranslationsToCards);
+document.addEventListener('languageChanged', applyTranslationsToCards);
+
+function applyTranslationsToCards() {
+  const currentLanguage = localStorage.getItem('language') || 'en';
+  // Importamos las traducciones dinámicamente
+  import('../styles/translations/translations.js').then(module => {
+    const translations = module.translations;
+    const langTranslations = translations[currentLanguage === 'en' ? 'en' : 'es'];
+    
+    // Aplicamos las traducciones a todos los elementos con data-translate
+    document.querySelectorAll('[data-translate]').forEach(element => {
+      const key = element.getAttribute('data-translate');
+      if (key && langTranslations && key in langTranslations) {
+        element.textContent = langTranslations[key];
+      }
+    });
+  });
+}
+</script>

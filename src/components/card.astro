@@ -1,0 +1,30 @@
+---
+// card.astro
+
+interface Props {
+  title: string;
+  description: string;
+  imageSrc: string;
+  titleKey: string;
+  descriptionKey: string;
+}
+
+const { imageSrc, title = 'N/A', description = 'N/A', titleKey, descriptionKey } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-top">
+    <img src={imageSrc} alt=img />
+  </div>
+  <div class="card-bottom">
+    <div class="title">
+    <h3 data-translate={titleKey}>{title}</h3>
+    <p data-translate={descriptionKey}>{description}</p>
+    </div>
+    <div class="line">
+        <button>
+          <img id="theme-button-icon" src="/src/assets/img/nwc.svg" alt="nw"/>
+        </button>
+    </div>
+  </div>
+</div>

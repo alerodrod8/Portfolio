@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageButton = document.getElementById('change-language');
     const languageIcon = document.getElementById('language-icon');
     const paletteButton = document.getElementById('change-palette'); // Botón de paleta
-    let currentLanguage = 'en'; // Idioma por defecto: inglés
+    let currentLanguage = localStorage.getItem('language') || 'en'; // Idioma por defecto: inglés
 
     // Función para aplicar las traducciones a los elementos marcados
     function applyTranslations() {
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cambiar idioma al hacer clic en el botón
     languageButton.addEventListener('click', () => {
         currentLanguage = currentLanguage === 'en' ? 'es' : 'en'; // Alternar entre inglés y español
+        localStorage.setItem('language', currentLanguage); // Guardar el idioma seleccionado
         updateLanguage();
     });
 
