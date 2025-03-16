@@ -10,6 +10,7 @@
     position: relative;
     width: 80px;
     height: 80px;
+    margin-left: 20px;
     margin-right: auto;
   }
 
@@ -31,16 +32,18 @@
   
   .button {
     display: inline-block;
-    padding: 15px 25px;
+    padding: 15px 20px;
     font-size: 20px;
     font-family: 'mt', sans-serif;
     cursor: pointer;
     text-align: center;
+    justify-content: center;
     text-decoration: none;
     outline: none;
     border: none;
     border-radius: 5px;
-    margin-left: 80px;
+    margin-left: 100px;
+    margin-right: 20px;
     transition: all 0.1s ease;
   }
   
@@ -72,10 +75,10 @@
   }
 
   .language-button {
-    width: 50px; /* Tamaño del botón */
+    width: 52px; /* Tamaño del botón */
     height: 50px; /* Tamaño del botón */
     border-radius: 50%; /* Hace el botón circular */
-    margin-right: -40px; /* Espacio a la derecha del botón */
+    margin-right: -60px; /* Espacio a la derecha del botón */
     padding: 0;
     display: flex;
     align-items: center;

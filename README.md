@@ -1,8 +1,14 @@
->### [❗] Portfolio currently under development - v0.8.1
+>### [❗] Portfolio currently under development - v0.8.3
 
 This portfolio contains the electronics projects I will develop over time. When a new post is added to the portfolio, a new repository with the same name as the project will also be added publicly on GitHub, containing the source code and technical files.
 
 # CHANGELOG
+
+>### v0.8.3 - 16/03/2025
+
+- 📝 Added initial information and functionality to the About section
+- ⚙️ Header logo and buttons position changed
+- ⚙️ Social info position changed
 
 >### v0.8.1 - 15/03/2025
 

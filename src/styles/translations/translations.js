@@ -16,6 +16,14 @@ const en = {
     d2: "Description 2",
     d3: "Description 3",
     d4: "Description 4",
+    nameInfo: "NAME & SURNAME, AGE",
+    occInfo: "OCCUPATION",
+    occupation: "COMPUTER SCIENCE STUDENT AT SEVILLE UNIVERSITY",
+    moreP: "MORE ABOUT ME...",
+    mrabt1: "TEXT1",
+    mrabt2: "TEXT2",
+    mrabt3: "TEXT3",
+    mrabt4: "TEXT4",
 };
 
 const es = {
@@ -36,6 +44,14 @@ const es = {
     d2: "Descripción 2",
     d3: "Descripción 3",
     d4: "Descripción 4",
+    nameInfo: "NOMBRE & APELLIDOS, EDAD",
+    occInfo: "PROFESION",
+    occupation: "ESTUDIANTE DE INGENIERIA DE COMPUTADORES EN LA UNIVERSIDAD DE SEVILLA",
+    moreP: "MAS SOBRE MI...",
+    mrabt1: "TEXTO1",
+    mrabt2: "TEXTO2",
+    mrabt3: "TEXTO3",
+    mrabt4: "TEXTO4",
 };
 
 export const translations = { en, es };
