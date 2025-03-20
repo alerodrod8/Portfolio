@@ -1,8 +1,15 @@
->### [❗] Portfolio currently under development - v0.8.3
+>### [❗] Portfolio currently under development - v0.8.6
 
 This portfolio contains the electronics projects I will develop over time. When a new post is added to the portfolio, a new repository with the same name as the project will also be added publicly on GitHub, containing the source code and technical files.
 
 # CHANGELOG
+
+>### v0.8.6 - 20/03/2025
+
+- 🔧 Fixed size of icons to maintain the homogeneity of the design
+- ⚙️ Card gallery button icon changed
+- ⚙️ Transition timings changed
+- ❌ Removed X (Twitter) account
 
 >### v0.8.3 - 16/03/2025
 
@@ -52,6 +59,5 @@ This portfolio contains the electronics projects I will develop over time. When 
 [<img src="./src/assets/img/linkedin.svg" alt="LinkedIn" width="32" height="32" style="margin-right: 10px">](https://www.linkedin.com/in/alejandro-rodriguez-b49932343/)
 [<img src="./src/assets/img/instagram.svg" alt="Instagram" width="32" height="32" style="margin-right: 10px">](https://www.instagram.com/Arodriguez.rr)
 [<img src="./src/assets/img/gmail.svg" alt="Gmail" width="32" height="32" style="margin-right: 10px">](mailto:rr.alejandrorodriguez@gmail.com)
-[<img src="./src/assets/img/twitter.svg" alt="Gmail" width="32" height="32" style="margin-right: 10px">](https://x.com/arodriguez_rr)
 
 ### ©2025 Alejandro Rodríguez Rodríguez

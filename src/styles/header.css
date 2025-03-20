@@ -27,7 +27,7 @@
     text-decoration: none;
     font-size: 36px;
     font-family: 'mt', sans-serif;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease;
   }
   
   .button {
@@ -44,7 +44,7 @@
     border-radius: 5px;
     margin-left: 100px;
     margin-right: 20px;
-    transition: all 0.1s ease;
+    transition: all 0.05s ease;
   }
   
   .button:active {
@@ -91,7 +91,7 @@
 .language-button img {
     width: 40px; /* Tamaño de la imagen */
     height: 40px; /* Tamaño de la imagen */
-    transition: transform 0.3s ease; /* Animación al hacer clic */
+    transition: transform 0.05s ease; /* Animación al hacer clic */
 }
 
 /* Estilos para el tema claro */

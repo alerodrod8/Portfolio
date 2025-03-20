@@ -76,7 +76,7 @@ body.dark .title {
   background: none;
   outline: none;
   margin-bottom: 10px;
-  transition: all 0.1s ease;
+  transition: all 0.05s ease;
 }
 
 .line button img {

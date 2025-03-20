@@ -23,17 +23,17 @@
     font-family: 'mt', 'sans-serif';
     white-space: nowrap;
     color: var(--color-gpbl); /* Texto oscuro por defecto */
-    transition: color 0.3s ease; /* Transición suave */
+    transition: color 0.2s ease; /* Transición suave */
   }
 
   body:not(.dark) .socials-text {
-    transition: color 0.3s ease; /* Transición suave */
+    transition: color 0.2s ease; /* Transición suave */
   }
 
   body.dark .socials-text {
     color: var(--color-gpwl); /* Texto claro en modo oscuro */
     color: var(--color-gpbl); /* Texto oscuro por defecto */
-    transition: color 0.3s ease; /* Transición suave */
+    transition: color 0.2s ease; /* Transición suave */
   }
   
   .social-icon {

@@ -3,19 +3,18 @@
     flex-direction: row;
     height: 100%;
     width: 100%;
+    margin-top: 15px;
 }
 
 .left-about{
     flex-direction: column;
     width: 50%;
     height: 100%;
-    background-color: aqua;
 }
 
 .lt-about{
     height: 35%;
     width: 100%;
-    background-color: grey;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,9 +27,16 @@
     justify-content: center;
     display: flex;
     margin-left: 5px;
-    width: 33%;
-    height: 98%;
-    background-color: brown;
+    width: 31%;
+    height: 94%;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.img-about img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .info-about{
@@ -38,9 +44,9 @@
     width: 66%;
     height: 100%;
     flex-direction: column;
-    background-color: orange;
     justify-content: center;
     margin-left: 10px;
+    transition: all 0.2s ease;
 }
 
 .info-about h2{
@@ -54,120 +60,278 @@
     font-size: 1.3em;
 }
 
+.info-about span{
+    min-height: 120px;
+}
+
 .bl-about{
     height: 65%;
     width: 100%;
-    background-color: yellow;
     display: flex;
     flex-direction: row;
+    transition: all 0.2s ease;
 }
 
 .desc1-about{
     height: 100%;
-    width: 50%;
-    background-color: pink;
+    width: 100%;
 }
 
-.desc2-about{
-    height: 100%;
-    width: 50%;
-    background-color: purple;
+.desc1-about h2{
+    font-family: 'mm', 'sans-serif';
+    font-size: 1.4em;
+}
+
+.desc1-about h3{
+    margin-top: -10px;
+    font-family: 'mt', 'sans-serif';
+    font-size: 1.3em;
+}
+
+#sp {
+    margin-left: 10px;
+    font-family: 'mt', 'sans-serif';
+    font-size: 1.3em;
+}
+
+.li{
+    margin-left: -16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.li h3{
+    min-width: 375px;
+}
+
+.li::before{
+    content: '•';
+    color: var(--color-gpbl);
+    margin-top: -10px;
+    font-size: 1.3em; /* Tamaño del punto */
+    margin-right: 12px;
+}
+
+.li img{
+    margin-top: -12.5px;
+    height: 25px;
+    width: 25px;
+    transition: transform 0.2s ease;
+}
+
+.li span{
+    margin-top: -8px;
 }
 
 .right-about{
     display: flex;
     width: 50%;
-    height: 100%;
+    height: 94%;
     flex-direction: column;
-    background-color: blue;
+    margin-top: 48px;
+    margin-left: -10px;
+    transition: all 0.2s ease;
 }
 
 .mr{
-    height: 35%;
+    height: auto;
     width: 100%;
-    background-color: red;
     display: flex;
     flex-direction: column;
 }
 
+.content-mr {
+    height: fit-content;
+}
+
 .pers-about{
+    margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     height: 17.5%;
-    background-color: aliceblue;
     align-items: center;
     font-family: 'mm', 'sans-serif';
     font-size: 1.4em;
 }
 
 .more-about {
-    height: 65%;
+    height: fit-content;
     width: 100%;
-    background-color: ivory;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
 }
 
 .more1 {
-    height: 75%;
-    width: 18%;
-    display: flex;
-    margin-right: 3%;
-    margin-left: 3%;
-    background-color: plum;
+    height: 45%;
+    width: 7%;
+    display: flex;  
+    margin-left: 5.5%;
+    margin-right: 5.5%;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    background: #F4EFEB;
     border: 2.5px solid var(--color-cpa);
+    aspect-ratio: 1/1;
+    transition: all 0.2s ease;
+}
+
+.more1 img{
+    height: 45px;
+    width: 45px;
+}
+
+#eco {
+    margin-top: -7px;
+}
+
+#know {
+    height: 40px;
+    width: 40px;
+    margin-left: -2px;
+    margin-bottom: -1px;
 }
 
 .text-about {
     display: flex;
-    height: 17.5%;
+    height: 29.5%;
     width: 100%;
-    background-color: lightblue;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .text1-about {
+    display: flex;
     height: 100%;
-    margin-right: 3.3125%;
-    margin-left: 3.3125%;
-    width: 18%;
-    justify-content: center;
+    margin: 0 1.2% 0 1.2%;
+    width: 16%;
+    justify-content:center;
     align-items: center;
     display: flex;
-    background-color: lightcoral;
     font-family: 'mt', 'sans-serif';
     font-size: 1.3em;
+    aspect-ratio: 1/1;
 }
 
 .cr-about {
-    height: 45%;
+    height: 42.5%;
     width: 100%;
-    background-color: yellow;
     display: flex;
     flex-direction: row;
 }
 
 .cr-left{
-    width: 50%;
-    height: 100%;
-    background-color: pink;
+    width: 100%;
+    height: fit-content;
 }
 
-.cr-right{
-    width: 50%;
-    height: 100%;
-    background-color: purple;
+.cr-left h2 {
+    margin-top: 0;
+    font-family: 'mm', 'sans-serif';
+    font-size: 1.4em;
+}
+
+.cr-left ul li h3{
+    font-family: 'mt', 'sans-serif';
+    font-size: 1.3em;
+    margin-top: -10px;
 }
 
 .docs-about {
     height: 20%;
     width: 100%;
-    background-color: green;
     display: flex;
-    flex-direction: row;
+    margin-top: -50px;
+    flex-direction: column;
 }
+
+.docs-about h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    display:flex;
+    height: 25%;
+    width: 100%;
+    font-family: 'mm', 'sans-serif';
+    font-size: 1.4em;
+    align-items: center;
+}
+
+.docs-content{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content1 {
+    display: flex;
+    width: 30%;
+    height: 50%;
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    justify-content: center;
+    border-radius: 15%;
+}
+
+.content1 h3{
+    font-family: 'mt', 'sans-serif';
+    font-size: 1.3em;
+}
+
+.content1 button{
+    margin-left: 20px;
+    border: none;
+    border-radius: 30%;
+    margin-top: -8px;
+    background: var(--color-cpa);
+    transition: all 0.05s ease;
+    cursor: pointer;
+}
+
+.content1 button img{
+    width: 45px;
+    height: 45px;
+}
+
+.content1 button:active {
+    box-shadow: 0 2px var(--color-cps);
+    transform: translateY(4px);
+  }
+  
+  body:not(.dark) .content1 button {
+    background-color: var(--color-cpa);
+    box-shadow: 0 6px var(--color-cps);
+  }
+  
+  body.dark .content1 button {
+    background-color: var(--color-dpa);
+    box-shadow: 0 6px var(--color-dps);
+  }
+  
+  body.dark .content1 button:active {
+    box-shadow: 0 2px var(--color-dps); /* Sombra reducida */
+  }
+  
+  body:not(.dark) .content1 button:active {
+    box-shadow: 0 2px var(--color-cps);
+  }
+
+  body.dark .info-about,
+  body.dark .bl-about,
+  body.dark .right-about {
+    color: var(--color-gpbl);
+  }
+
+  body.dark .img-about,
+  body.dark .more1{
+    border: 2.5px solid var(--color-dpa);
+  }
+
+  #n2, #n3{
+    visibility: hidden;
+  } 
