@@ -40,7 +40,7 @@
   .main-layout {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 1vh;
   }
   
   .top-container {
@@ -49,15 +49,15 @@
   
   .bottom-container {
     display: flex;
-    flex: 1;
+    flex: 89vh;
   }
 
   .right-container {
     flex: 1;
-    margin: 20px 60px 20px 20px;
+    margin: 2vh 3vw 2vh 2vw;
     position: relative;
     display: flex;
-    gap: 10px;
+    gap: 1vw;
   }
 
   .right-container::before {
@@ -65,8 +65,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 5vw;
     height: 5px;
+    z-index: 35;
   }
   
   .right-container::after {
@@ -74,7 +75,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100px;
+    width: 5vw;
     height: 5px;
   }
 
@@ -92,5 +93,5 @@
   
   .left-container {
     flex: 0 0 auto;
-    width: 150px;
+    width: 8vw;
   }

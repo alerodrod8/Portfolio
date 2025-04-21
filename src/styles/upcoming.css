@@ -1,23 +1,20 @@
 .rl-container {
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  margin: 10px 0px 0px 0px;
-  padding: 10px;
+  margin-top: 1.5vh;
 }
 
 .coming-soon-container {
   font-family: 'mm', sans-serif;
-  font-size: 80px;
-  margin-top: 10px;
+  font-size: 8vh;
   color: var(--color-gpbl);
   transition: all 0.2s ease;
 }
 
 .tech-details-container{
   font-family: 'mt', sans-serif;
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 2.5vh;
   text-align: justify;
   color: var(--color-gpbl);
   transition: all 0.2s ease;
@@ -26,7 +23,8 @@
 .rr-container {
   flex: 1; /* Ocupa el resto del espacio disponible */
   display: flex;
-  margin-top: 10px;
+  margin-top: 1.5vh;
+  margin-left: 2vh;
   flex-direction: column;
 }
 
@@ -35,12 +33,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 1vh;
 }
 
 .image-scroll-container {
-  width: 700px; /* Ancho fijo del contenedor de imágenes */
-  height: 600px; /* Alto fijo */
+  width: 78vh ; /* Ancho fijo del contenedor de imágenes */
+  height: 70vh; /* Alto fijo */
   position: relative; /* Necesario para superponer las imágenes */
   overflow: hidden; /* Oculta el contenido que se desborda */
 }
@@ -61,22 +59,22 @@
 
 /* Efecto hover para las flechas */
 .arrow-container:hover .arrow-icon {
-  transform: scale(1.2); /* Aumenta el tamaño de la flecha */
+  transform: scale(1.1); /* Aumenta el tamaño de la flecha */
 }
 
 .arrow-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 10vh;
+  height: 10vh;
   cursor: pointer;
   background: none;
   }
 
 .arrow-icon {
-  width: 60px;
-  height: 60px;
+  width: 10vh;
+  height: 10vh;
   transition: all 0.2s ease; /* Transición suave para el cambio de tamaño */
 }
 
@@ -93,24 +91,20 @@
 .image-content img {
   width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
   height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
-  object-fit: cover; /* Ajusta la imagen manteniendo su relación de aspecto y cubriendo el contenedor */
+  object-fit: cover; /* Ajusta la imagen manteniendo su relación de aspecto y cubriendo el contenedor */;
 }
 
 .content-container {
   height: 15%;
-}
-
-.content-container {
-  height: 25%;
   display: flex;
   align-items: center; /* Centra verticalmente los botones */
   justify-content: center; /* Centra horizontalmente los botones */
-  gap: 20px; /* Espacio entre los botones */
+  gap: 3vh; /* Espacio entre los botones */
 }
 
 .circle-button {
-  width: 32px; /* Ancho del botón */
-  height: 32px; /* Alto del botón */
+  width: 5vh; /* Ancho del botón */
+  height: 5vh; /* Alto del botón */
   border-radius: 50%; /* Hace que el botón sea circular */
   border: none; /* Elimina el borde predeterminado */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
@@ -130,27 +124,27 @@ body:not(.dark) .circle-button {
 /* Efecto hover para el tema claro */
 body:not(.dark) .circle-button:hover {
   background-color: var(--color-cpa); /* Color rosado en hover (tema claro) */
-  width: 50px; /* Ancho aumentado en hover */
-  height: 50px; /* Alto aumentado en hover */
+  width: 7vh; /* Ancho aumentado en hover */
+  height: 7vh; /* Alto aumentado en hover */
 }
 
 /* Efecto hover para el tema oscuro */
 body.dark .circle-button:hover {
   background-color: var(--color-dpa); /* Color amarillo en hover (tema oscuro) */
-  width: 50px; /* Ancho aumentado en hover */
-  height: 50px; /* Alto aumentado en hover */
+  width: 7vh; /* Ancho aumentado en hover */
+  height: 7vh; /* Alto aumentado en hover */
 }
 
 /* Estilos para el botón activo en tema claro */
 body:not(.dark) .circle-button.active {
   background-color: var(--color-cpa); /* Color rosado en tema claro */
-  width: 50px; /* Ancho aumentado */
-  height: 50px; /* Alto aumentado */
+  width: 7vh; /* Ancho aumentado */
+  height: 7vh; /* Alto aumentado */
 }
 
 /* Estilos para el botón activo en tema oscuro */
 body.dark .circle-button.active {
   background-color: var(--color-dpa); /* Color amarillo en tema oscuro */
-  width: 50px; /* Ancho aumentado */
-  height: 50px; /* Alto aumentado */
+  width: 7vh; /* Ancho aumentado */
+  height: 7vh; /* Alto aumentado */
 }

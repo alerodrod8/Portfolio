@@ -3,9 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    bottom: -40px;
-    left: 30px;
-    gap: 20px;
+    bottom: -6vh;
+    left: 5vh;
     transform: rotate(-90deg);
     transform-origin: left top;
     right: auto;
@@ -14,12 +13,12 @@
   .socials-icons {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 3vh;
   }
   
   .socials-text {
-    min-width: 450px;
-    font-size: 30px;
+    min-width: 56.5vh;
+    font-size: 3.75vh;
     font-family: 'mt', 'sans-serif';
     white-space: nowrap;
     color: var(--color-gpbl); /* Texto oscuro por defecto */
@@ -37,22 +36,21 @@
   }
   
   .social-icon {
-    height: 45px;
-    width: 45px;
+    height: 6vh;
+    width: 6vh;
   }
   
   #copy {
-    font-size: 15px;
+    font-size: 2vh;
     font-family: 'mm', sans-serif;
     white-space: nowrap;
-    margin-top: 10px;
   }
   
   #copy::before {
     content: "©";
     color: var(--color-dpa);
-    margin-right: 5px;
-    font-size: 25px;
+    margin-right: 1vh;
+    font-size: 3.5vh;
     font-weight: bold;
   }
   

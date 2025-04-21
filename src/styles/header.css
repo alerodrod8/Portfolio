@@ -2,83 +2,86 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 1.5vh 2vw;
     position: relative;
   }
   
   .logo {
     position: relative;
-    width: 80px;
-    height: 80px;
-    margin-left: 20px;
+    width: 5.5vw;
+    height: 8vh;
+    margin-left: -1vh;
     margin-right: auto;
   }
 
   .nav-links {
     display: flex;
-    gap: 100px;
+    gap: 5vw;
     position: absolute;
-    left: 50%;
+    left: 49%;
+    margin-top: 2vh;
     transform: translateX(-50%);
   }
   
   .nav-link {
     color: var(--color-gpbl);
     text-decoration: none;
-    font-size: 36px;
+    font-size: 5vh;
     font-family: 'mt', sans-serif;
     transition: all 0.2s ease;
   }
   
   .button {
     display: inline-block;
-    padding: 15px 20px;
-    font-size: 20px;
+    padding: 2vh 2vw;
+    font-size: 1.1vw;
     font-family: 'mt', sans-serif;
     cursor: pointer;
-    text-align: center;
-    justify-content: center;
     text-decoration: none;
     outline: none;
     border: none;
-    border-radius: 5px;
-    margin-left: 100px;
-    margin-right: 20px;
+    border-radius: 5vh;
+    margin-left: 12vh;
+    margin-right: 2vh;
     transition: all 0.05s ease;
   }
   
   .button:active {
-    box-shadow: 0 2px var(--color-cps);
-    transform: translateY(4px);
+    box-shadow: 0 3vh var(--color-cps);
+    transform: translateY(0.66vh);
   }
   
-  body:not(.dark) .button {
-    background-color: var(--color-cpa);
-    box-shadow: 0 6px var(--color-cps);
-  }
+  /* Estilos para el tema claro */
+body:not(.dark) .button {
+  background-color: var(--color-cpa);
+  box-shadow: 0 1vh var(--color-cps);
+}
 
-  body.dark .button {
-    background-color: var(--color-dpa);
-    box-shadow: 0 6px var(--color-dps);
-  }
-  
-  body.dark .button:active {
-    box-shadow: 0 2px var(--color-dps); /* Sombra reducida */
-  }
-  
-  body:not(.dark) .button:active {
-    box-shadow: 0 2px var(--color-cps);
-  }
+/* Estilos para el tema oscuro */
+body.dark .button {
+  background-color: var(--color-dpa);
+  box-shadow: 0 1vh var(--color-dps);
+}
+
+/* Efecto de "hundimiento" en el tema claro */
+body:not(.dark) .button:active {
+  box-shadow: 0 0.33vh var(--color-cps);
+}
+
+/* Efecto de "hundimiento" en el tema oscuro */
+body.dark .button:active {
+  box-shadow: 0 0.33vh var(--color-dps);
+}
   
   #change-palette {
-    min-width: 225px;
+    min-width: 30vh;
   }
 
   .language-button {
-    width: 52px; /* Tamaño del botón */
-    height: 50px; /* Tamaño del botón */
+    width: 7.5vh; /* Tamaño del botón */
+    height: 7.5vh; /* Tamaño del botón */
     border-radius: 50%; /* Hace el botón circular */
-    margin-right: -60px; /* Espacio a la derecha del botón */
+    margin-right: -7.5vh; /* Espacio a la derecha del botón */
     padding: 0;
     display: flex;
     align-items: center;
@@ -89,29 +92,29 @@
 }
 
 .language-button img {
-    width: 40px; /* Tamaño de la imagen */
-    height: 40px; /* Tamaño de la imagen */
+    width: 6vh; /* Tamaño de la imagen */
+    height: 6vh; /* Tamaño de la imagen */
     transition: transform 0.05s ease; /* Animación al hacer clic */
 }
 
 /* Estilos para el tema claro */
 body:not(.dark) .language-button {
     background-color: var(--color-cpa);
-    box-shadow: 0 6px var(--color-cps);
+    box-shadow: 0 1vh var(--color-cps);
 }
 
 /* Estilos para el tema oscuro */
 body.dark .language-button {
     background-color: var(--color-dpa);
-    box-shadow: 0 6px var(--color-dps);
+    box-shadow: 0 1vh var(--color-dps);
 }
 
 /* Efecto de "hundimiento" en el tema claro */
 body:not(.dark) .language-button:active {
-    box-shadow: 0 2px var(--color-cps);
+    box-shadow: 0 0.33vh var(--color-cps);
 }
 
 /* Efecto de "hundimiento" en el tema oscuro */
 body.dark .language-button:active {
-    box-shadow: 0 2px var(--color-dps);
+    box-shadow: 0 0.33vh var(--color-dps);
 }
