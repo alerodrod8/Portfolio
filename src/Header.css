@@ -1,24 +1,25 @@
 .header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(251, 251, 254, 0.95); /* Very light blue-gray with transparency */
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border-right: 1px solid #81c8ba; /* Accent color border */
+  padding: 1rem 0;
   z-index: 1000;
 }
 
 .navbar {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  flex-direction: column;
+  gap: 1rem;
   margin: 0;
   padding: 0;
 }
@@ -28,30 +29,54 @@
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #333;
+  color: #2d2d2d; /* Dark gray text */
   font-weight: 500;
-  padding: 0.5rem 0;
-  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  border-radius: 4px;
+  white-space: nowrap;
+  position: relative;
+  font-family: 'MM', serif; /* Use MM font for navigation categories */
 }
 
 .nav-link:hover {
-  color: #2d2d2d;
+  background-color: rgba(129, 200, 186, 0.2); /* Accent color with transparency */
+  color: #81c8ba; /* Accent color */
 }
 
-.nav-link::after {
-  content: '';
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.text {
   position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  width: 100%;
-  height: 4px;
-  background-color: #2d2d2d;
-  transition: transform 0.2s;
-  transform-origin: center;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(251, 251, 254, 0.95); /* Very light blue-gray background */
+  color: #2d2d2d; /* Dark gray text */
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  margin-left: 10px;
+  border: 1px solid #81c8ba; /* Accent color border */
+  font-family: 'MM', serif; /* Use MM font for category tooltips */
 }
 
-.nav-link:hover::after {
-  transform: translateX(-50%) scaleX(1);
+.nav-link:hover .text {
+  opacity: 1;
 }

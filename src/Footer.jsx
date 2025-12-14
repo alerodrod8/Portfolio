@@ -26,7 +26,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="copyright">
-        v0.1 2025 Alejandro Rodríguez Rodríguez
+        v0.2 2025 Alejandro Rodríguez Rodríguez
       </div>
     </footer>
   );

@@ -3,9 +3,10 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #f0f0f0; /* Light background */
+  background-color: #fbfbfe; /* Very light blue-gray background */
   padding: 20px;
   text-align: center;
+  border-top: 1px solid #81c8ba; /* Accent color border */
 }
 
 .contact-info h3 {
@@ -18,7 +19,7 @@
   border: none;
   height: 5px;
   width: 15%;
-  background-color: #2d2d2d;
+  background-color: #81c8ba; /* Accent color */
   margin-bottom: 20px;
   border-radius: 50px;
 }
@@ -36,7 +37,7 @@
 }
 
 .social-icons a:hover {
-  color: #007bff; /* Blue on hover */
+  color: #81c8ba; /* Accent color */
 }
 
 .copyright {
