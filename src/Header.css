@@ -4,11 +4,16 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(251, 251, 254, 0.95); /* Very light blue-gray with transparency */
-  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  border-right: 1px solid #81c8ba; /* Accent color border */
   padding: 1rem 0;
   z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#root.dark-mode .header {
+  background-color: rgba(30, 30, 30, 0.95); /* Dark background with transparency */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
 .navbar {
@@ -40,6 +45,10 @@
   white-space: nowrap;
   position: relative;
   font-family: 'MM', serif; /* Use MM font for navigation categories */
+}
+
+#root.dark-mode .nav-link {
+  color: #e0e0e0; /* Light gray text in dark mode */
 }
 
 .nav-link:hover {
@@ -77,6 +86,92 @@
   font-family: 'MM', serif; /* Use MM font for category tooltips */
 }
 
+#root.dark-mode .text {
+  background-color: rgba(30, 30, 30, 0.95); /* Dark background */
+  color: #e0e0e0; /* Light text */
+  border-color: #4a9d88; /* Darker accent */
+}
+
 .nav-link:hover .text {
   opacity: 1;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(251, 251, 254, 0.95); /* Light background */
+  color: #2d2d2d; /* Dark icon */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  z-index: 1001;
+  outline: none;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(129, 200, 186, 0.2);
+  color: #81c8ba;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle:focus {
+  outline: none;
+}
+
+#root.dark-mode .theme-toggle {
+  background-color: rgba(30, 30, 30, 0.95); /* Dark background */
+  color: #e0e0e0; /* Light icon */
+  box-shadow: 2px 0 4px rgba(255, 255, 255, 0.1);
+}
+
+#root.dark-mode .theme-toggle:hover {
+  background-color: rgba(91, 179, 161, 0.2);
+  color: #5bb3a1;
+  box-shadow: 2px 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle svg {
+  width: 35px;
+  height: 35px;
+}
+
+.theme-toggle .text {
+  position: absolute;
+  left: -180px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(251, 251, 254, 0.95);
+  color: #2d2d2d;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border: 1px solid #81c8ba;
+  font-family: 'MM', serif;
+}
+
+.theme-toggle:hover .text {
+  opacity: 1;
+}
+
+#root.dark-mode .theme-toggle .text {
+  background-color: rgba(30, 30, 30, 0.95);
+  color: #e0e0e0;
+  border-color: #5bb3a1;
 }

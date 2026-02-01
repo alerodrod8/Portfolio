@@ -7,6 +7,9 @@
   height: 100%;
   padding: 2rem;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background-color: #faf8f5;
 }
 
 .section-content h1 {
@@ -46,4 +49,60 @@
 .contact-info a:hover {
   color: #81c8ba; /* Accent color on hover */
   text-decoration: underline;
+}
+
+/* Dark Mode Styles */
+#root.dark-mode .section-content {
+  background-color: #23201a;
+}
+
+#root.dark-mode .section-content h1 {
+  color: #5bb3a1; /* Lighter primary color for dark mode */
+}
+
+#root.dark-mode .section-content p {
+  color: #d0d0d0; /* Light gray text for dark mode */
+}
+
+.contact-container {
+  padding: 3rem;
+  border-radius: 20px;
+  color: #5bb3a1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container .contact-info {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-container .contact-info p,
+.contact-container .contact-info a {
+  color: white;
+}
+
+.contact-container .contact-info a:hover {
+  color: #fff;
+}
+
+#root.dark-mode .contact-info {
+  background-color: #2a5a52; /* Darker secondary color */
+  border-color: #5bb3a1; /* Lighter accent border */
+}
+
+#root.dark-mode .contact-info p {
+  color: #d0d0d0; /* Light gray text for dark mode */
+}
+
+#root.dark-mode .contact-info a {
+  color: #6bb3a5; /* Lighter accent color on dark background */
+}
+
+#root.dark-mode .contact-info a:hover {
+  color: #81c8ba; /* Brighter accent color on hover */
 }

@@ -7,6 +7,8 @@
   height: 100%;
   padding: 2rem;
   box-sizing: border-box;
+  background-color: #f5f0fa;
+  margin-left: 90px;
 }
 
 .section-content h1 {
@@ -44,4 +46,28 @@
   transform: translateX(10px);
   background-color: #81c8ba; /* Accent color background on hover */
   color: #2d2d2d; /* Keep dark text */
+}
+
+/* Dark Mode Styles */
+#root.dark-mode .section-content {
+  background-color: #1a1523;
+}
+
+#root.dark-mode .section-content h1 {
+  color: #5bb3a1; /* Lighter primary color for dark mode */
+}
+
+#root.dark-mode .section-content p {
+  color: #d0d0d0; /* Light gray text for dark mode */
+}
+
+#root.dark-mode .section-content li {
+  background-color: #2a5a52; /* Darker secondary color */
+  color: #d0d0d0; /* Light gray text */
+  border-color: #5bb3a1; /* Lighter accent border */
+}
+
+#root.dark-mode .section-content li:hover {
+  background-color: #5bb3a1; /* Lighter accent on hover */
+  color: #1a1a1a; /* Dark text on hover */
 }

@@ -7,6 +7,8 @@
   height: 100%;
   padding: 2rem;
   box-sizing: border-box;
+  background-color: #fbfbfe;
+  margin-left: 90px;
 }
 
 .section-content h1 {
@@ -44,4 +46,28 @@
   border-radius: 20px;
   border: 1px solid #81c8ba; /* Accent color border */
   font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+#root.dark-mode .section-content {
+  background-color: #0d0d0d;
+}
+
+#root.dark-mode .section-content h1 {
+  color: #5bb3a1; /* Lighter primary color for dark mode */
+}
+
+#root.dark-mode .section-content p {
+  color: #d0d0d0; /* Light gray text for dark mode */
+}
+
+#root.dark-mode .tech-stack h3 {
+  color: #6bb3a5; /* Lighter accent color for dark mode */
+}
+
+#root.dark-mode .tech-icons span {
+  background-color: #2a5a52; /* Darker secondary color */
+  color: #d0d0d0; /* Light gray text */
+  border-color: #5bb3a1; /* Lighter accent border */
 }

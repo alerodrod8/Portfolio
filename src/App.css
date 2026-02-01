@@ -7,6 +7,12 @@
   background-color: #fbfbfe; /* Very light blue-gray background */
   color: #2d2d2d; /* Keep dark text for contrast */
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root.dark-mode {
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text */
 }
 
 /* Custom Font Definitions */
@@ -55,6 +61,11 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   background-color: #fbfbfe; /* Very light blue-gray background */
   flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+#root.dark-mode .portfolio-section {
+  background-color: #1a1a1a; /* Dark background */
 }
 
 .section-content {

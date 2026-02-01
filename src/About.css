@@ -7,6 +7,10 @@
   height: 100%;
   padding: 2rem;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background-color: #f0faf8;
+  margin-left: 90px;
 }
 
 .section-content h1 {
@@ -22,4 +26,18 @@
   font-size: 1.2rem;
   max-width: 600px;
   text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+#root.dark-mode .section-content {
+  background-color: #1a2623;
+}
+
+#root.dark-mode .section-content h1 {
+  color: #5bb3a1; /* Lighter primary color for dark mode */
+}
+
+#root.dark-mode .section-content p {
+  color: #d0d0d0; /* Light gray text for dark mode */
 }

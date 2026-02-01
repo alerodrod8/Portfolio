@@ -4,14 +4,14 @@ import './UpcomingProjects.css';
 const UpcomingProjects = () => {
   return (
     <div className="section-content">
+      <div className="upcoming-container">
       <h1>Upcoming Projects</h1>
-      <p>Exciting projects in development:</p>
+      <p>Projects Currently in Development:</p>
       <ul>
-        <li>Smart Home Automation System</li>
-        <li>IoT Environmental Monitoring Device</li>
-        <li>DIY Robotics Platform</li>
-        <li>Wireless Sensor Network</li>
+        <li>Corporative Check-in NFC System (TFG)</li>
+        <li>120mm Fan Adapter</li>
       </ul>
+      </div>
     </div>
   );
 };

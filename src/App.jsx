@@ -11,6 +11,7 @@ import Contact from './Contact.jsx'
 function App() {
   const [currentSection, setCurrentSection] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
     const container = document.querySelector('.sections-container');
@@ -18,6 +19,15 @@ function App() {
       container.style.transform = `translateY(-${currentSection * 100}vh)`;
     }
   }, [currentSection])
+
+  useEffect(() => {
+    const root = document.getElementById('root');
+    if (isDarkMode) {
+      root.classList.add('dark-mode');
+    } else {
+      root.classList.remove('dark-mode');
+    }
+  }, [isDarkMode])
 
   const sections = [
     { id: 'home', component: <Home /> },
@@ -43,7 +53,7 @@ function App() {
 
   return (
     <>
-      <Header onSectionChange={changeSection} />
+      <Header onSectionChange={changeSection} isDarkMode={isDarkMode} onToggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
       <main className="main-content">
         <div className="sections-container">
           {sections.map((section, index) => (
